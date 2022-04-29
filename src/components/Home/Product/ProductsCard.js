@@ -16,7 +16,7 @@ const ProductsCard = ({ item }) => {
                     <p><span className='fw-bold'>Description:</span> {description}</p>
                 </div>
                 <div className='d-flex justify-content-between ps-3 pe-3 pb-4'>
-                    <Link to={`/${_id}`} className='btn button1 rounded-pill pt-2 pb-2 ps-4 pe-4'>Update</Link>
+                    <Link to={`/products/${_id}`} className='btn button1 rounded-pill pt-2 pb-2 ps-4 pe-4'>Update</Link>
                     <Link to='/checkout' className='btn button2 rounded-pill pt-2 pb-2 ps-4 pe-4'>Delete</Link>
                 </div>
             </div>
