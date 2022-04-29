@@ -1,0 +1,28 @@
+#card-img img{
+    width: 500px !important;
+    height: 300px !important;
+}
+.button1{
+    background-color: white;
+    color: #5ed9d7 !important;
+    border: 1px solid #5ed9d7 !important;
+    font-weight: bold !important;
+}
+.button1:hover{
+    background-color: #5ed9d7 !important;
+    color: white !important;
+}
+.button2{
+    background-color: white;
+    color: red !important;
+    border: 1px solid red !important;
+    font-weight: bold !important;
+}
+.button2:hover{
+    background-color: red !important;
+    color: white !important;
+}
+.titles p{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}

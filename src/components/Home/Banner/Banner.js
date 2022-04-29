@@ -1,7 +1,5 @@
 import './Banner.css'
 const Banner = () => {
-       
-
         return (
             
             <div className='text-center' id='banner'>
