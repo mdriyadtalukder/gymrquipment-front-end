@@ -39,7 +39,7 @@ const SignUp = () => {
 
     }
     return (
-        <div className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+        <div id='signUp' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form onSubmit={signupForm}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>

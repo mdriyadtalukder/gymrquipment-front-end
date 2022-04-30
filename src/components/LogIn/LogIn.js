@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { Form, Spinner } from 'react-bootstrap';
 import auth from '../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import './LogIn.css'
+import './LogIn.css';
+import '../Home/Product/ProductsCard.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -54,7 +55,7 @@ const LogIn = () => {
         }
     }
     return (
-        <div className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+        <div  id='logIn' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form onSubmit={loginForm}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

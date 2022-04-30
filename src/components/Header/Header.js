@@ -12,11 +12,11 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <Navbar sticky="top" id='header' expand="lg">
+        <Navbar collapseOnSelect sticky="top" expand="lg" id='header' variant="dark" >
             <Container>
                 <Navbar.Brand className='text-white fw-bold fs-2' as={Link} to="/">Gym Equipment House</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link className='text-white fw-bold navbar-element' as={Link} active to="/">Home</Nav.Link>
                         <Nav.Link className='text-white fw-bold navbar-element ' as={Link} active to="/blogs">Blogs</Nav.Link>

@@ -35,7 +35,7 @@
     border: 2px solid  #5ed9d7 !important;
 }
 @media only screen and (max-width:688px){
-#avatar{
+#avatar,#additemForm,#logIn,#signUp{
     width: 90% !important;
 }
 #avatar-info{
@@ -43,7 +43,7 @@
 }
 }
 @media only screen and (min-width:688px) and (max-width:992px){
-    #avatar{
+    #avatar,#additemForm,#logIn,#signUp{
         width: 90% !important;
     }
 }
