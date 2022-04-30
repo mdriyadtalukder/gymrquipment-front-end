@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import './ProductsCard.css'
+import './ProductsCard.css';
 
 const ProductCardId = () => {
     const { productsCardId } = useParams();
@@ -19,20 +19,24 @@ const ProductCardId = () => {
         const quantiti = quantities.current.value;
         const quantity = parseInt(quantiti) + products?.quantity;
         const updateUser = { quantity };
-        fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updateUser),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                alert('quantity added successfully!!');
-                event.target.reset();
-                setReload(!reload);
+        if (isNaN(quantity) || quantity <= 0) {
+            alert('Enter valid number')
+        }
+        else {
+            fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updateUser),
             })
+                .then(response => response.json())
+                .then(data => {
+                    window.confirm('Are you to add quantity ?')
+                    event.target.reset();
+                    setReload(!reload);
+                })
+        }
     }
 
     const updateQuantity = event => {
@@ -47,8 +51,7 @@ const ProductCardId = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                alert('Delivery successfully!!');
+                window.confirm('Are you sure to deliver this item?');
                 setReload(!reload);
             })
     }
@@ -69,7 +72,7 @@ const ProductCardId = () => {
                         <p><span className='fw-bold'>Description:</span> {products?.description}</p>
                     </div>
                     <div className='text-center mb-3'>
-                        <button onClick={updateQuantity} className='btn button1'>Delivaery</button>
+                        <button onClick={updateQuantity} className='btn button1'>Delivaered</button>
                     </div>
                 </Col>
                 <Form onSubmit={updateUser} className='w-75 mx-auto'>
