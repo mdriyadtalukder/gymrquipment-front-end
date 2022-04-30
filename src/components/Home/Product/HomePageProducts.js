@@ -20,7 +20,7 @@ const HomePageProducts = () => {
             <h1 className='text-center fw-bold'> Gym Equipment Items</h1>
             <div className='row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
                 {
-                    Itemss.map(item => <ProductsCard key={item._id} item={item}></ProductsCard>)
+                    Itemss.map(item => <ProductsCard key={item._id} item={item}>Card</ProductsCard>)
                 }
             </div>
             <div className='text-center'>
