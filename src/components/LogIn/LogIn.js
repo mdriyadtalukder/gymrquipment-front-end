@@ -72,7 +72,7 @@ const LogIn = () => {
                 {allError}
                 <button id='login' className='btn w-100'>Log In</button>
                 <div className="text-center pt-2">
-                    <button onClick={forgetPassword} style={{ color: '#5ed9d7' }} className=' btn'>Forget password?</button>
+                    <button onClick={forgetPassword} style={{ color: '#5ed9d7' }} className=' btn fw-bold'>Forget password?</button>
                 </div>
                 <p >New to Gym Equipment House? <Link to='/signup' style={{ color: '#5ed9d7' }} className='text-decoration-none fw-bold'>Please Sign Up </Link></p>
             </Form>

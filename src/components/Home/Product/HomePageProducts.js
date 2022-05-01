@@ -24,7 +24,7 @@ const HomePageProducts = () => {
                 }
             </div>
             <div className='text-center'>
-                <Link to='/products' className='btn button3 mb-2'>Manage Inventories <i class="fas fa-arrow-right"></i></Link>
+                <Link to='/products' className='btn button3 mb-2'>Manage Inventories <i className="fas fa-arrow-right"></i></Link>
             </div>
         </div>
     );

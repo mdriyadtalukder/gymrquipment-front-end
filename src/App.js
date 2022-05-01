@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Additems from './components/Additems/Additems';
+import Error from './components/Error/Error';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Product from './components/Home/Product/Product';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/products' element={<Product></Product>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<Error></Error>}></Route>
       </Routes>
     </div>
   );
