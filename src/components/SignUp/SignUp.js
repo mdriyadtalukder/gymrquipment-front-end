@@ -3,6 +3,7 @@ import { Form, Spinner } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogIn from '../SocialLogIn/SocialLogIn';
 
 const SignUp = () => {
     const nameValue = useRef('');
@@ -56,9 +57,10 @@ const SignUp = () => {
                 {allError}
                 <button id='login' className='btn w-100'>Sign Up</button>
 
-                <p className='mt-3'>Already have an account? <Link to='/login' style={{ color: '#5ed9d7' }} className='text-decoration-none'>Please Log In </Link></p>
+                <p className='mt-3'>Already have an account? <Link to='/login' style={{ color: '#5ed9d7' }} className=' fw-bold text-decoration-none'>Please Log In </Link></p>
 
             </Form>
+            <SocialLogIn></SocialLogIn>
         </div>
     );
 };

@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import SocialLogIn from '../SocialLogIn/SocialLogIn';
 
 const LogIn = () => {
 
@@ -73,8 +74,9 @@ const LogIn = () => {
                 <div className="text-center pt-2">
                     <button onClick={forgetPassword} style={{ color: '#5ed9d7' }} className=' btn'>Forget password?</button>
                 </div>
-                <p >New to Gym Equipment House? <Link to='/signup' style={{ color: '#5ed9d7' }} className='text-decoration-none'>Please Sign Up </Link></p>
+                <p >New to Gym Equipment House? <Link to='/signup' style={{ color: '#5ed9d7' }} className='text-decoration-none fw-bold'>Please Sign Up </Link></p>
             </Form>
+            <SocialLogIn></SocialLogIn>
             <ToastContainer ></ToastContainer>
         </div>
     );
