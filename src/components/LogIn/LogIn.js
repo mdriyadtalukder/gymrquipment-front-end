@@ -7,6 +7,7 @@ import '../Home/Product/ProductsCard.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const LogIn = () => {
 
@@ -37,11 +38,13 @@ const LogIn = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    const loginForm = event => {
+    const loginForm = async event => {
         event.preventDefault();
         const email = emailValue.current.value;
         const password = passwordValue.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('https://tranquil-brushlands-76388.herokuapp.com/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
     }
     const forgetPassword = async () => {
         const email = emailValue.current.value;
@@ -55,7 +58,7 @@ const LogIn = () => {
         }
     }
     return (
-        <div  id='logIn' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+        <div id='logIn' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form onSubmit={loginForm}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

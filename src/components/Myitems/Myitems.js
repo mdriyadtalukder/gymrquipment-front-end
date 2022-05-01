@@ -3,20 +3,36 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import ProductsCard from '../Home/Product/ProductsCard';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
 const Myitems = () => {
     const [user] = useAuthState(auth);
-    const [items, setItems] = useState([]);
+    const [items, setItem] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         const myItems = async () => {
             const email = user?.email;
-            const { data } = await axios.get(`https://tranquil-brushlands-76388.herokuapp.com/users?email=${email}`);
-            setItems(data)
+            try {
+                const { data } = await axios.get(`https://tranquil-brushlands-76388.herokuapp.com/addusers?email=${email}`, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setItem(data)
+            }
+            catch (error) {
+                console.log(error);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login');
+                }
+            }
         }
         myItems();
     }, [user]);
     const deleteItem = id => {
         const remaining = items.filter(item => item._id !== id);
-        setItems(remaining);
+        setItem(remaining);
     }
 
     return (
