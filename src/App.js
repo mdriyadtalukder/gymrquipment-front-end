@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Additems from './components/Additems/Additems';
+import Blogs from './components/Blogs/Blogs';
 import Error from './components/Error/Error';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -15,6 +16,7 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products/:productsCardId' element={
           <RequireAuth>

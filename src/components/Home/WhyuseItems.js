@@ -4,10 +4,10 @@ import img2 from '../../images/Selectorized-2.jpg';
 
 const WhyuseItems = () => {
     return (
-        <div className='container mt-5'>
+        <div className='container mt-5 pt-5'>
             <h1 className='text-center fw-bold mb-4'> Why Choose Gym Equipment House Selectorized Equipment</h1>
             <p className=' text-center fs-3'>Build tO be functional and effective</p>
-            <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
+            <div id='containers' className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 mt-5 pt-4 pb-4'>
                 <div className='col mb-4 d-flex justify-content-center align-items-center'>
                     <div className='pe-lg-4'>
                         <h2 className='text-center'>Easy to use</h2>
@@ -19,7 +19,7 @@ const WhyuseItems = () => {
                     <img src={img} className='img-fluid' alt="" />
                 </div >
             </div>
-            <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
+            <div id='containers' className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
                 <div className='col mb-4'>
                     <img src={img2} className='img-fluid' alt="" />
                 </div >

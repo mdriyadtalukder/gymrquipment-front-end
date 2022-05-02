@@ -9,6 +9,7 @@ import img2 from '../../images/Commercial.jpg';
 import img3 from '../../images/Selectorized-68-series.jpg';
 import img4 from '../../images/Selectorized-88-series-1.jpg';
 import WhyuseItems from './WhyuseItems';
+import Footer from '../Footer/Footer';
 const Home = () => {
     const [itemss, loading, setItems] = useItems();
     const Itemss = [];
@@ -52,10 +53,10 @@ const Home = () => {
                             <Link to='/products' className='btn button3 mb-2'>Manage Inventories <i className="fas fa-arrow-right"></i></Link>
                         </div>
                     </div>
-                    <section className='container mt-5'>
+                    <section className='container pt-5 mt-5'>
                         <h1 className='text-center fw-bold mb-4'>Gym Equipment House Selectorized Equipment</h1>
                         <p className=' text-center fs-3'>Premium quality material and skilled technology </p>
-                        <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
+                        <div id='containers' className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 mt-5 pt-4 pb-4'>
                             <div className='col mb-4'>
                                 <img src={img3} className='img-fluid' alt="" />
                             </div >
@@ -67,7 +68,7 @@ const Home = () => {
                                 </div>
                             </div >
                         </div>
-                        <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
+                        <div id='containers' className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4'>
                             <div className='col mb-4 d-flex justify-content-center align-items-center'>
                                 <div className='pe-lg-4'>
                                     <h2 className='text-center'>88 Series Selectorized Machine</h2>
@@ -81,6 +82,7 @@ const Home = () => {
                         </div>
                     </section>
                     <WhyuseItems></WhyuseItems>
+                    <Footer></Footer>
                 </div>}
         </>
     );
