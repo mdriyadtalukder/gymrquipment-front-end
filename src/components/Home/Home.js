@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Banner from './Banner/Banner';
 import useItems from './Hook/useItems';
 import ProductsCard from './Product/ProductsCard';
+import img from '../../images/home-use-1.jpg';
+import img2 from '../../images/Commercial.jpg';
 const Home = () => {
     const [itemss, loading, setItems] = useItems();
     const Itemss = [];
@@ -23,6 +25,19 @@ const Home = () => {
             </div> :
                 <div>
                     <Banner></Banner>
+                    <section className='container'>
+                        <h1 className='text-center fw-bold mb-4'>Welcome to Gym Equipment House</h1>
+                        <p className=' text-center fs-3'>Items for home and commercial </p>
+                        <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
+                            <div className='col mb-4'>
+
+                                <img src={img} className='img-fluid' alt="" />
+                            </div >
+                            <div className='col mb-4'>
+                                <img src={img2} className='img-fluid' alt="" />
+                            </div >
+                        </div>
+                    </section>
                     <div className='container'>
                         <h1 className='text-center fw-bold'> Gym Equipment Items</h1>
                         <div className='row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
