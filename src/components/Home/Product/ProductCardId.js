@@ -74,7 +74,7 @@ const ProductCardId = () => {
                                     <img src={products?.img} alt="" className='img-fluid' />
                                 </div>
                                 <div id='avatar-info' className="w-50 mx-auto">
-                                    <h4 className=' fw-bold pt-5 '>Name: {products?.name}</h4>
+                                    <h4 className=' fw-bold pt-5 '>{products?.name}</h4>
                                     <p className='pt-3'>Id: {products?._id}</p>
                                     <p>Quantity: {products?.quantity}</p>
                                     <p >Supplier Name: {products?.supplierName}</p>

@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../Home/Product/ProductsCard.css'
+import '../Home/Product/ProductsCard.css';
 const Additems = () => {
     const [user] = useAuthState(auth);
     const namevalue = useRef('');
@@ -58,7 +58,7 @@ const Additems = () => {
     return (
         <div className='mt-3 mb-3'>
             <h1 className='text-center fw-bold'>Add New Items</h1>
-            <Form id='additemForm' onSubmit={addItem} className='w-50 mx-auto shadow-lg p-5 mt-3 mb-3'>
+            <Form id='additemform' onSubmit={addItem} className='w-50 mx-auto shadow-lg p-5 mt-3 mb-3'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control readOnly type="email" value={user?.email} />

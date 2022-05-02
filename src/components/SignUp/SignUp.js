@@ -55,7 +55,7 @@ const SignUp = () => {
                     <Form.Control ref={passwordValue} type="password" placeholder="Password" />
                 </Form.Group>
                 {allError}
-                <button id='login' className='btn w-100'>Sign Up</button>
+                <button id='signin' className='btn w-100'>Sign Up</button>
 
                 <p className='mt-3'>Already have an account? <Link to='/login' style={{ color: '#5ed9d7' }} className=' fw-bold text-decoration-none'>Please Log In </Link></p>
 

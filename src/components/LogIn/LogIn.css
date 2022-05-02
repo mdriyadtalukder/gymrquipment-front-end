@@ -1,3 +1,6 @@
-#login{
+#logIn,#signUp,#additemForm {
+    background-color: white;
+}
+#login,#signin {
     background-color: #5ed9d7;
 }
