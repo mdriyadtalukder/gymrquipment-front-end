@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../Home/Product/ProductsCard.css';
+import '../Home/Product/ProductsCard.css'
 const Additems = () => {
     const [user] = useAuthState(auth);
     const namevalue = useRef('');

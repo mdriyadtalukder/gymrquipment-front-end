@@ -1,52 +1,74 @@
-#card-img img{
+#card-img img {
     width: 500px !important;
     height: 300px !important;
 }
-#additemform ,#avatar,#containers{
+
+#additemform,
+#avatar,
+#containers {
     background-color: white !important;
 }
-.button1{
+
+.button1 {
     background-color: white;
     color: #5ed9d7 !important;
     border: 1px solid #5ed9d7 !important;
     font-weight: bold !important;
 }
-.button1:hover{
+
+.button1:hover {
     background-color: #5ed9d7 !important;
     color: white !important;
 }
-.button2{
+
+.button2 {
     background-color: white;
     color: red !important;
     border: 1px solid red !important;
     font-weight: bold !important;
 }
-.button2:hover{
+
+.button2:hover {
     background-color: red !important;
     color: white !important;
 }
-.button3{
+
+.button3 {
     background-color: #5ed9d7 !important;
     color: white !important;
     border: 1px solid #5ed9d7 !important;
 }
-.titles p{
+
+.titles p {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
-#avatar,#cards{
-    border: 2px solid  #5ed9d7 !important;
+
+#avatar,
+#cards {
+    border: 2px solid #5ed9d7 !important;
 }
-@media only screen and (max-width:688px){
-#avatar,#additemForm,#logIn,#signUp{
-    width: 90% !important;
+
+@media only screen and (max-width:688px) {
+
+    #avatar,
+    #additemform,
+    #logIn,
+    #signUp {
+        width: 90% !important;
+    }
+
+    #avatar-info {
+        width: 100% !important;
+    }
 }
-#avatar-info{
-    width: 100% !important;
-}
-}
-@media only screen and (min-width:688px) and (max-width:992px){
-    #avatar,#additemForm,#logIn,#signUp{
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+
+    #avatar,
+    #additemform,
+    #logIn,
+    #signUp {
         width: 90% !important;
     }
 }

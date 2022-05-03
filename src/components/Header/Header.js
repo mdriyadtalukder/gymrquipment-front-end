@@ -38,9 +38,6 @@ const Header = () => {
                                     <button onClick={logOut} className='text-black fw-bold button3 text-white'>Log Out </button>
                                 </Nav>
                                 : <Nav.Link className='text-black btn fw-bold button3 text-white' as={Link} active to="/login">Log In </Nav.Link>
-
-
-
                         }
                     </Nav>
                 </Navbar.Collapse>
