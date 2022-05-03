@@ -11,6 +11,8 @@ const Myitems = () => {
     const [items, setItem] = useState([]);
     const [loading, setloading] = useState(false);
     const navigate = useNavigate();
+
+    //Show my items
     useEffect(() => {
         const myItems = async () => {
             const email = user?.email;
@@ -34,6 +36,8 @@ const Myitems = () => {
         }
         myItems();
     }, [user]);
+
+    //delete items function
     const deleteItem = id => {
         const remaining = items.filter(item => item._id !== id);
         setItem(remaining);

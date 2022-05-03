@@ -13,6 +13,8 @@ import Footer from '../Footer/Footer';
 const Home = () => {
     const [itemss, loading, setItems] = useItems();
     const Itemss = [];
+
+    //get 6 items 
     for (let i = 0; i < itemss.length; i++) {
         if (Itemss.length < 6) {
             Itemss.push(itemss[i]);

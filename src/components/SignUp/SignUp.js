@@ -10,6 +10,8 @@ const SignUp = () => {
     const emailValue = useRef('');
     const passwordValue = useRef('');
     const navigate = useNavigate();
+
+    // Hook of createUserWithEmailAndPassword with sent email verification
     const [
         createUserWithEmailAndPassword,
         user,
@@ -30,6 +32,8 @@ const SignUp = () => {
     if (user) {
         navigate('/')
     }
+
+    //Sign Up
     const signupForm = event => {
         event.preventDefault();
         const name = nameValue.current.value;

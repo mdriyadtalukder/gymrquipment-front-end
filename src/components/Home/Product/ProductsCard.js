@@ -4,6 +4,8 @@ import './ProductsCard.css'
 
 const ProductsCard = ({ item, children, deleteItem }) => {
     const { _id, img, name, description, price, quantity, supplierName } = item;
+
+    //delete items
     const deleteItems = id => {
 
         const proceed = window.confirm("Are you sure to delete this item?");
@@ -23,8 +25,8 @@ const ProductsCard = ({ item, children, deleteItem }) => {
             <div id='cards' className='card h-100 shadow rouded'>
                 <div id='card-img' className='card-body titles pb-5'>
                     <img src={img} className='img-fluid' alt="" />
-                    <h4  className=' fw-bold pt-5 '>{name}</h4>
-                    <p  className='pt-3'>Quantity: {quantity}</p>
+                    <h4 className=' fw-bold pt-5 '>{name}</h4>
+                    <p className='pt-3'>Quantity: {quantity}</p>
                     <p >Supplier Name: {supplierName}</p>
                     <h6 className='pb-3'>Price: ${price}</h6>
                     <p>Description: {description}</p>

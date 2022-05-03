@@ -7,6 +7,8 @@ import ProductsCard from './ProductsCard';
 const Product = () => {
     const [itemss, loading, setItems] = useItems();
 
+
+    //Delete items function
     const deleteItem = id => {
         const remaining = itemss.filter(item => item._id !== id);
         setItems(remaining);

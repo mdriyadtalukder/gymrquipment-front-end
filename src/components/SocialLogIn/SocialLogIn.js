@@ -7,8 +7,14 @@ import googleLogo from '../../images/google.webp'
 import githubLogo from '../../images/github.png'
 
 const SocialLogIn = () => {
+
+    // Hook of signInWithGoogle
     const [signInWithGoogle, loading] = useSignInWithGoogle(auth);
+
+    // Hook of signInWithGithub
     const [signInWithGithub, githubloading] = useSignInWithGithub(auth);
+
+    //loadings
     if (loading || githubloading) {
         return <div className='d-flex justify-content-center align-items-center mt-5'>
             <Spinner animation="border" variant="info" />

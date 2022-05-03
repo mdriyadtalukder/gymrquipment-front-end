@@ -49,6 +49,7 @@
     border: 2px solid #5ed9d7 !important;
 }
 
+/* for phone */
 @media only screen and (max-width:688px) {
 
     #avatar,
@@ -63,6 +64,7 @@
     }
 }
 
+/* for tablet */
 @media only screen and (min-width:688px) and (max-width:992px) {
 
     #avatar,

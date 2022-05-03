@@ -9,6 +9,8 @@ import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth);
+
+    //Log Out
     const logOut = () => {
         signOut(auth);
     }

@@ -9,6 +9,8 @@ const ProductCardId = () => {
     const [products, setProducts] = useState([]);
     const [loading, setloading] = useState(false);
     const [reload, setReload] = useState(false);
+
+    //Get items by id
     useEffect(() => {
         setloading(true)
         fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`)
@@ -19,6 +21,8 @@ const ProductCardId = () => {
             });
     }, [productsCardId, reload]);
 
+
+    //add quantity
     const updateUser = event => {
         event.preventDefault();
         const quantiti = quantities.current.value;
@@ -44,6 +48,7 @@ const ProductCardId = () => {
         }
     }
 
+    //Delivery
     const updateQuantity = event => {
         const quantity = (products?.quantity) - 1;
         const updateUser = { quantity };

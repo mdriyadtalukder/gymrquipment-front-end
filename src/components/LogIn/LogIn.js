@@ -16,19 +16,28 @@ const LogIn = () => {
     const passwordValue = useRef('');
     const navigate = useNavigate();
     let location = useLocation();
+
+
+    //Hook of signInWithEmailAndPassword
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    // Hook of sendPasswordResetEmail
     const [sendPasswordResetEmail, sending, forgetPasswordError] = useSendPasswordResetEmail(auth);
     let from = location.state?.from?.pathname || "/";
 
     let allError;
+
+    //errors with conditonal statement
     if (error || forgetPasswordError) {
         allError = <p className='text-danger'>Error: {error?.message} {forgetPasswordError?.message}</p>
     }
+
+    //loadings
     if (loading || sending) {
         return <div className='d-flex justify-content-center align-items-center mt-5'>
             <Spinner animation="border" id='spinnerr' variant="info" />
@@ -39,6 +48,8 @@ const LogIn = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+
+    //Log In
     const loginForm = async event => {
         event.preventDefault();
         const email = emailValue.current.value;
@@ -47,6 +58,8 @@ const LogIn = () => {
         const { data } = await axios.post('https://tranquil-brushlands-76388.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
     }
+
+    //Forget Password
     const forgetPassword = async () => {
         const email = emailValue.current.value;
         await sendPasswordResetEmail(email);

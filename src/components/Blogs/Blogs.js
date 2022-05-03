@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Blogs = () => {
+
+    //questions and answers
     return (
         <div className='container'>
             <h1 className='text-center mt-3'>Questions and answers</h1>

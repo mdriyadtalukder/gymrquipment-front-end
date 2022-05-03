@@ -23,7 +23,8 @@ const Additems = () => {
         const quantity = quantityvalue.current.value;
         const supplierName = suppliervalue.current.value;
 
-        const order = {
+        // add item's object
+        const additems = {
             email: user?.email,
             name: name,
             img: img,
@@ -34,14 +35,14 @@ const Additems = () => {
 
         }
 
-
+        //add item with conditional statement
         if (name && img && description && price && quantity && supplierName) {
             fetch('https://tranquil-brushlands-76388.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(order),
+                body: JSON.stringify(additems),
             }, [reload])
                 .then(response => response.json())
                 .then(data => {
