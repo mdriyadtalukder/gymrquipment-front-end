@@ -10,7 +10,7 @@ const useItems = () => {
                 setItems(data);
                 setloading(false);
             })
-    }, [])
+    }, [itemss]);
     return [itemss, loading, setItems];
 }
 

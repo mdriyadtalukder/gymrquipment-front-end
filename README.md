@@ -10,7 +10,7 @@ Live WebsiteLink: [https://gym-equipment-house.web.app/](https://gym-equipment-h
  * React,React bootstrap.
  * Router,Private Router.
  * Firebase Authentication.
+ * Node,Express,JSON Web Token(JWT).
  * MongoDB.
- * JSON Web Token(JWT)
 
  

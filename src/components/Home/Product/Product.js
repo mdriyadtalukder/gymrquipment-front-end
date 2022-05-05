@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useItems from '../Hook/useItems';
 import ProductsCard from './ProductsCard';
 
 const Product = () => {
-    const [itemss, loading, setItems] = useItems();
-
+    const [itemss, setItems] = useState([]);
+    const [loading, setloading] = useState(true);
+    useEffect(() => {
+        fetch('https://tranquil-brushlands-76388.herokuapp.com/users')
+            .then(res => res.json())
+            .then(data => {
+                setItems(data);
+                setloading(false);
+            })
+    }, [itemss]);
 
     //Delete items function
     const deleteItem = id => {

@@ -16,8 +16,8 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
+        <Route exact path='/' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products/:productsCardId' element={
           <RequireAuth>
             <ProductCardId></ProductCardId>

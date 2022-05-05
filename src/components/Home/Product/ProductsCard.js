@@ -29,7 +29,7 @@ const ProductsCard = ({ item, children, deleteItem }) => {
                     <p className='pt-3'>Quantity: {quantity}</p>
                     <p >Supplier Name: {supplierName}</p>
                     <h6 className='pb-3'>Price: ${price}</h6>
-                    <p>Description: {description}</p>
+                    <p><span className='fw-bold'>Description:</span> {description}</p>
                 </div>
                 {!children ? <>
                     <div className='d-flex justify-content-between'>

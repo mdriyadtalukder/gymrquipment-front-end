@@ -20,7 +20,7 @@ const Additems = () => {
         const img = imgvalue.current.value;
         const description = descriptionvalue.current.value;
         const price = pricevalue.current.value;
-        const quantity = quantityvalue.current.value;
+        const quantity = parseInt(quantityvalue.current.value);
         const supplierName = suppliervalue.current.value;
 
         // add item's object

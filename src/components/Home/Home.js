@@ -1,8 +1,6 @@
-import React from 'react';
-import { Spinner } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from './Banner/Banner';
-import useItems from './Hook/useItems';
 import ProductsCard from './Product/ProductsCard';
 import img from '../../images/home-use-1.jpg';
 import img2 from '../../images/Commercial.jpg';
@@ -16,10 +14,17 @@ display : block;
 margin: auto;
 `;
 const Home = () => {
-    const [itemss, loading, setItems] = useItems();
-
+    const [itemss, setItems] = useState([]);
+    const [loading, setloading] = useState(true);
+    useEffect(() => {
+        fetch('https://tranquil-brushlands-76388.herokuapp.com/users')
+            .then(res => res.json())
+            .then(data => {
+                setItems(data);
+                setloading(false);
+            })
+    }, [itemss]);
     return (
-
         <>
 
             {!loading && <>
