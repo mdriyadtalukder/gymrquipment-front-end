@@ -33,7 +33,11 @@ function App() {
             <Additems></Additems>
           </RequireAuth>
         }></Route>
-        <Route path='/products' element={<Product></Product>}></Route>
+        <Route path='/products' element={
+          <RequireAuth>
+            <Product></Product>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
