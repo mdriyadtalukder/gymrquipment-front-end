@@ -84,11 +84,13 @@ const Home = () => {
                 </div>
             </section>
                 <WhyuseItems></WhyuseItems>
-                <Footer></Footer></>}
-
-
-
+                <Footer></Footer>
+            </>}
         </>
+
+
+
+
     );
 };
 

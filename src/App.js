@@ -3,6 +3,7 @@ import './App.css';
 import Additems from './components/Additems/Additems';
 import Blogs from './components/Blogs/Blogs';
 import Error from './components/Error/Error';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Product from './components/Home/Product/Product';

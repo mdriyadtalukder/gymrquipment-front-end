@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../Home/Product/ProductsCard.css'
+import Footer from '../Footer/Footer';
 const Additems = () => {
     const [user] = useAuthState(auth);
     const namevalue = useRef('');
@@ -92,6 +93,7 @@ const Additems = () => {
                 <button className='btn button3 w-100'>Add Item</button>
             </Form>
             <ToastContainer ></ToastContainer>
+            <Footer></Footer>
         </div>
     );
 };

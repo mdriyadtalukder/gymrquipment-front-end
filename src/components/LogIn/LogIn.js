@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import SocialLogIn from '../SocialLogIn/SocialLogIn';
+import Footer from '../Footer/Footer';
 
 const LogIn = () => {
 
@@ -72,25 +73,28 @@ const LogIn = () => {
         }
     }
     return (
-        <div id='logIn' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
-            <Form onSubmit={loginForm}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailValue} type="email" placeholder="Enter email" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordValue} type="password" placeholder="Password" />
-                </Form.Group>
-                {allError}
-                <button id='login' className='btn w-100'>Log In</button>
-                <div className="text-center pt-2">
-                    <button onClick={forgetPassword} style={{ color: '#5ed9d7' }} className=' btn fw-bold'>Forget password?</button>
-                </div>
-                <p >New to Gym Equipment House? <Link to='/signup' style={{ color: '#5ed9d7' }} className='text-decoration-none fw-bold'>Please Sign Up </Link></p>
-            </Form>
-            <SocialLogIn></SocialLogIn>
-            <ToastContainer ></ToastContainer>
+        <div>
+            <div id='logIn' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+                <Form onSubmit={loginForm}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control ref={emailValue} type="email" placeholder="Enter email" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control ref={passwordValue} type="password" placeholder="Password" />
+                    </Form.Group>
+                    {allError}
+                    <button id='login' className='btn w-100'>Log In</button>
+                    <div className="text-center pt-2">
+                        <button onClick={forgetPassword} style={{ color: '#5ed9d7' }} className=' btn fw-bold'>Forget password?</button>
+                    </div>
+                    <p >New to Gym Equipment House? <Link to='/signup' style={{ color: '#5ed9d7' }} className='text-decoration-none fw-bold'>Please Sign Up </Link></p>
+                </Form>
+                <SocialLogIn></SocialLogIn>
+                <ToastContainer ></ToastContainer>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
