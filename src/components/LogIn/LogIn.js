@@ -56,7 +56,7 @@ const LogIn = () => {
         const email = emailValue.current.value;
         const password = passwordValue.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://tranquil-brushlands-76388.herokuapp.com/login', { email });
+        const { data } = await axios.post('https://gymequipment-back-end.onrender.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
     }
 

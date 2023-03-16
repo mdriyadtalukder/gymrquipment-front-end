@@ -17,7 +17,7 @@ const Home = () => {
     const [itemss, setItems] = useState([]);
     const [loading, setloading] = useState(true);
     useEffect(() => {
-        fetch('https://tranquil-brushlands-76388.herokuapp.com/users')
+        fetch('https://gymequipment-back-end.onrender.com/users')
             .then(res => res.json())
             .then(data => {
                 setItems(data);

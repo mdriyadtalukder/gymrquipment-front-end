@@ -19,7 +19,7 @@ const Myitems = () => {
             const email = user?.email;
             try {
                 setloading(true)
-                const { data } = await axios.get(`https://tranquil-brushlands-76388.herokuapp.com/addusers?email=${email}`, {
+                const { data } = await axios.get(`https://gymequipment-back-end.onrender.com/addusers?email=${email}`, {
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -50,7 +50,7 @@ const Myitems = () => {
                 <Spinner animation="border" variant="info" />
             </div> :
                 <div>
-                    <div className='container'  style={{ minHeight: '90vh' }}>
+                    <div className='container' style={{ minHeight: '90vh' }}>
                         <h1 className='text-center mt-3 mb-3 fw-bold'>My Items</h1>
                         <div className='row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
                             {

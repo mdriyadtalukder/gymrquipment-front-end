@@ -38,7 +38,7 @@ const Additems = () => {
 
         //add item with conditional statement
         if (name && img && description && price && quantity && supplierName) {
-            fetch('https://tranquil-brushlands-76388.herokuapp.com/users', {
+            fetch('https://gymequipment-back-end.onrender.com/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const Additems = () => {
     }
     return (
         <div>
-            <div className='mt-3 mb-3' style={{ minHeight: '90vh' }}>
+            <div style={{ minHeight: '90vh' }} className='mt-3 mb-3' >
                 <h1 className='text-center fw-bold'>Add New Items</h1>
                 <Form id='additemform' onSubmit={addItem} className='w-50 mx-auto shadow-lg p-5 mt-3 mb-3'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

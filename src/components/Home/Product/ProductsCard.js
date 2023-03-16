@@ -10,7 +10,7 @@ const ProductsCard = ({ item, children, deleteItem }) => {
 
         const proceed = window.confirm("Are you sure to delete this item?");
         if (proceed) {
-            fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${id}`, {
+            fetch(`https://gymequipment-back-end.onrender.com/user/${id}`, {
                 method: 'DELETE',
             })
                 .then(response => response.json())

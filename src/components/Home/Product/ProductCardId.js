@@ -14,7 +14,7 @@ const ProductCardId = () => {
     //Get items by id
     useEffect(() => {
         setloading(true)
-        fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`)
+        fetch(`https://gymequipment-back-end.onrender.com/user/${productsCardId}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -33,7 +33,7 @@ const ProductCardId = () => {
             alert('Enter valid number')
         }
         else {
-            fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`, {
+            fetch(`https://gymequipment-back-end.onrender.com/user/${productsCardId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const ProductCardId = () => {
     const updateQuantity = event => {
         const quantity = (products?.quantity) - 1;
         const updateUser = { quantity };
-        fetch(`https://tranquil-brushlands-76388.herokuapp.com/user/${productsCardId}`, {
+        fetch(`https://gymequipment-back-end.onrender.com/user/${productsCardId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
